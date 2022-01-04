@@ -1,0 +1,61 @@
+<div class="calculator">
+  <div class="calculator-screen">
+    <p class="operation">
+      <span 
+        *ngIf="calculadora.firstValue > 0">
+        {{ calculadora.firstValue }}
+      </span>
+      
+      <span 
+        class="operator" 
+        *ngIf="calculadora.operator != undefined">
+        {{ calculadora.operator }} 
+      </span>
+      
+      <span 
+        *ngIf="calculadora.seccondValue > 0">
+        {{ calculadora.seccondValue }}
+      </span>
+    </p>
+    
+    <h2 
+      class="result" 
+      *ngIf="calculadora.result != undefined">
+      <span class="equals">=</span>
+      {{ calculadora.result }}
+    </h2>
+  </div>
+
+  <div class="calculator-buttons">
+    <div class="calculator-buttons-row">
+      <button class="btn action" (click)="onClear()">C</button>
+      <button class="btn action" (click)="onClearLastValue()">AC</button>
+      <button class="btn action" (click)="setOperation('%')">%</button>
+      <button class="btn operator" (click)="setOperation('/')">/</button>
+    </div>
+    <div class="calculator-buttons-row">
+      <button class="btn" (click)="setNumber(7)">7</button>
+      <button class="btn" (click)="setNumber(8)">8</button>
+      <button class="btn" (click)="setNumber(9)">9</button>
+      <button class="btn operator" (click)="setOperation('*')">*</button>
+    </div>
+    <div class="calculator-buttons-row">
+      <button class="btn" (click)="setNumber(4)">4</button>
+      <button class="btn" (click)="setNumber(5)">5</button>
+      <button class="btn" (click)="setNumber(6)">6</button>
+      <button class="btn operator" (click)="setOperation('-')">-</button>
+    </div>
+    <div class="calculator-buttons-row">
+      <button class="btn" (click)="setNumber(1)">1</button>
+      <button class="btn" (click)="setNumber(2)">2</button>
+      <button class="btn" (click)="setNumber(3)">3</button>
+      <button class="btn operator" (click)="setOperation('+')">+</button>
+    </div>
+    <div class="calculator-buttons-row">
+      <button class="btn" (click)="showMessage()">🥰</button>
+      <button class="btn" (click)="setNumber(0)">0</button>
+      <button class="btn">.</button>
+      <button class="btn operator" (click)="onResult()">=</button>
+    </div>
+  </div>
+</div>

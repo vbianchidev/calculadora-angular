@@ -1,0 +1,32 @@
+:host {
+  justify-content: center;
+  align-items: center;
+
+  background-color: #14161d;
+  display: flex;
+  flex-direction: column;
+}
+
+
+main {
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  color: #f2f2f2;
+  height: 10vh;
+}
+
+footer a {
+  text-decoration: none;
+  color: #26f8d2;
+}
+
+footer span {
+  color: #26f8d2;
+}
